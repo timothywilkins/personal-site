@@ -1,0 +1,264 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 25px;
+  cursor: pointer;
+  transition: all 0.4s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #000;
+    transition: all 0.4s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-left, .menu-right {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-left {
+    background-color: #e9e9e9; }
+  .menu-right {
+    background-color: #ffffff; }
+  .menu-nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    transition: all 0.4s ease-out; }
+    .menu-nav.show {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .menu-nav .nav-item {
+      list-style: none;
+      transition: all 0.4s ease-out; }
+      .menu-nav .nav-item.current > a {
+        color: #bbbbbb; }
+      .menu-nav .nav-item .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 30px;
+        text-transform: uppercase;
+        padding: 1 rem 0;
+        font-weight: 300;
+        color: #000;
+        text-decoration: none;
+        transition: all 0.4s ease-out; }
+        .menu-nav .nav-item .nav-link:hover {
+          color: #bbbbbb; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: white;
+  color: #000;
+  height: 100%;
+  margin: 0;
+  line-height: 1.5;
+  font-family: mr-eaves-xl-modern, sans-serif;
+  font-weight: 100;
+  font-style: normal; }
+  body#bg-img {
+    background: url(../img/portrait.jpg), linear-gradient(#d2d3d0 0%, #c8c8c6 50%, #bcc3cb 100%);
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    body#bg-img:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(255, 255, 255, 0); }
+
+h1,
+h2,
+h3 {
+  font-weight: 100;
+  margin: 0; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 9rem;
+    font-weight: 400; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.text-secondary {
+  font-style: italic;
+  font-weight: 900; }
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 60px); }
+  main .icons {
+    margin-top: 1rem; }
+    main .icons a {
+      font-size: 1.7em;
+      padding: 0.4rem;
+      margin-right: 0.5em; }
+      main .icons a:hover {
+        color: #bbbbbb;
+        transition: all 0.4s ease-out; }
+  main#home {
+    text-align: right;
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
+
+#photography a {
+  display: inline;
+  font-size: 2em; }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioword bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr); }
+  .about-info .bio-word {
+    grid-area: bioword;
+    margin: auto;
+    font-size: 9vw; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .about-info .job-1 {
+    grid-area: job1; }
+  .about-info .job-2 {
+    grid-area: job2; }
+    .about-info .job-2 .g-col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); }
+  .about-info .job-3 {
+    grid-area: job3; }
+  .about-info .job {
+    background: white;
+    padding: 0.5rem;
+    border-bottom: #bbbbbb 5px solid; }
+
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects .item-container {
+    width: 100%;
+    height: 300px;
+    border: 3px white solid;
+    background-color: gray; }
+  .projects img {
+    width: 100%;
+    border: 3px white solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #bbbbbb;
+      transition: all 0.4s ease-out; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #bbbbbb;
+    color: #000; }
+
+.btn-dark {
+  background: gray;
+  color: #fff; }
+
+.btn-light {
+  background: white;
+  color: #333; }
+
+#contact div#wuf-adv {
+  display: none !important; }
+
+#contact #wufoo-z17kv3911b8gloh #form1 .info h2 {
+  color: red !important; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #e6e6e6;
+  color: #000;
+  height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  #bg-img {
+    background-size: cover !important; }
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  #bg-img {
+    background-size: cover !important; }
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  .menu-left {
+    width: 0; }
+  .menu-right {
+    width: 100%; }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  #bg-img {
+    background-size: cover !important;
+    background-position: -350px 0 !important; }
+  main#home h1 {
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; } }

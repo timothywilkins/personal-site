@@ -1,0 +1,40 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+
+ Title : 
+ Author : 
+ URL : http://
+
+ Last Updated : 
+
+- - - - - - - - - - - - - - - - - - - - - */
+
+.wufoo {
+    background-color:#5e5e5e;
+}
+
+.wufoo .info{
+    display:none;
+}
+
+form li.buttons a {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0;
+}
+
+/* .wufoo label.desc, .wufoo legend.desc, .likert caption  {
+    color:red !important;
+} */
+
+.wufoo input.btTxt {
+    display:block;
+    padding:0.5rem 1rem;
+    border:0;
+    margin-bottom:0.3rem;
+    color:white;
+    background-color:orange;
+}
+
+#errorLi {
+    display:none !important;
+}
