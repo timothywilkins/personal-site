@@ -9,6 +9,35 @@
 
 //desktops and laptops
 @include mediaLg {
+    h1 {
+        &.lg-heading {
+            font-size: 5rem;
+        }
+
+        &.sm-heading {
+            font-size: 5rem;
+        }
+    }
+
+    .about-info {
+        grid-template-areas:
+            'bioimage bioimage'
+            'bio bio'
+            'skill1 skill2'
+            'skill3 skill4'
+            'skill5 skill6';
+        grid-template-columns: 1fr 1fr;
+
+        .bio-image {
+            margin: 0 auto;
+            width: 500px;
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+
+
+
     #bg-img {
         background-size: cover !important;
 
@@ -21,6 +50,32 @@
 
 //tablets and small laptps
 @include mediaMd {
+    main#home {
+        h1 {
+            margin-top: 4vh;
+    
+        }
+        .icons {
+            a {
+                font-size: 1.2em;
+            }
+        }
+    }
+    #bg-img {
+        background-size: cover !important;
+        background-position: -350px 0 !important;
+
+    }
+    h1 {
+        &.lg-heading {
+            font-size: 4rem;
+        }
+
+        &.sm-heading {
+            font-size: 4rem;
+        }
+    }
+
     #bg-img {
         background-size: cover !important;
 
@@ -39,21 +94,33 @@
     .menu-left {
         width: 0;
     }
+
     .menu-right {
         width: 100%;
     }
 
+    #about {
+        .about-info {
+            grid-template-areas:
+                'bioimage'
+                'bio'
+                'skill1'
+                'skill2'
+                'skill3'
+                'skill4'
+                'skill5'
+                'skill6';
+            grid-template-columns: 1fr;
 
-
-    .about-info {
-        grid-template-areas:
-            'bioimage'
-            'bio'
-            'job1'
-            'job2'
-            'job3';
-        grid-template-columns: 1fr;
+            .bio-image {
+                margin: 0 auto;
+                width: 500px;
+                height: 300px;
+                object-fit: cover;
+            }
+        }
     }
+
 
     .projects {
         grid-template-columns: repeat(2, 1fr);
@@ -62,15 +129,11 @@
 
 //smartphones
 @include mediaSm {
-    #bg-img {
-        background-size: cover !important;
-        background-position: -350px 0 !important;
 
-    }
 
-    main#home h1 {
-        margin-top: 10vh;
-    }
+
+
+    
 
     .projects {
         grid-template-columns: 1fr;

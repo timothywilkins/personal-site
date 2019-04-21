@@ -36,24 +36,26 @@ body {
   margin: 0;
   line-height: 1.5;
   font-family: mr-eaves-xl-modern, sans-serif;
-  font-weight: 100;
+  // font-weight: 100;
   font-style: normal;
 }
 
 h1,
 h2,
 h3 {
-  font-weight: 100;
+  font-size:1.5rem;
+  font-weight: 300;
   margin: 0;
 
   &.lg-heading {
     font-size: 9rem;
-    font-weight:400;
+    font-weight: 300;
+    color: #1d1d1d;
   }
 
   &.sm-heading {
-    font-style: italic;
     font-weight: 700;
+    font-style: italic;
     text-transform: uppercase;
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
@@ -63,9 +65,15 @@ h3 {
   }
 }
 
+p {
+  font-family: mr-eaves-xl-modern-narrow, sans-serif;
+  font-size:1.2rem;
+}
+
 a {
   color: set-text-color($secondary-color);
-  text-decoration: none;
+  color: rgb(26, 158, 247);
+
 }
 
 header {
@@ -76,7 +84,7 @@ header {
 
 .text-secondary {
   font-style: italic;
-  font-weight:900;
+  font-weight: 900;
 }
 
 main {
@@ -85,12 +93,14 @@ main {
   min-height: calc(100vh - 60px);
 
   .icons {
-    margin-top: 1rem;
+    // margin-top: 1rem;
 
     a {
+      text-decoration: none;
       font-size: 1.7em;
       padding: 0.4rem;
       margin-right: 0.5em;
+      color: #1d1d1d;
 
       &:hover {
         color: $secondary-color;
@@ -110,10 +120,18 @@ main {
 }
 
 #photography {
-  a {
-    display:inline;
-    font-size:2em;
-  }
+
+    a {
+      display: inline;
+      font-size: 2em;
+  
+      &:hover {
+        text-decoration: underline;
+        color: rgb(35, 193, 241);
+      }
+    }
+  
+
 
 }
 
@@ -123,27 +141,38 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    "bioword bio bio"
-    "job1 job2 job3";
+    "bioimage bio bio"
+    "skill1 skill2 skill3"
+    "skill4 skill5 skill6";
   grid-template-columns: repeat(3, 1fr);
 
-  .bio-word {
-    grid-area: bioword;
-    margin: auto;
-    font-size:9vw;
+  .bio-image {
+    object-fit: contain;
+    width:100%;
+    height:100%;
+    border-radius: 10px;
+    padding: 15px;
+    border: solid 1px rgb(223, 223, 223);
+    &:hover {
+      border: solid 1px #CCC;
+      -moz-box-shadow: 1px 1px 5px #999;
+      -webkit-box-shadow: 1px 1px 5px #999;
+      box-shadow: 1px 1px 5px #999;
+    }
   }
+
 
   .bio {
     grid-area: bio;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
-  .job-1 {
-    grid-area: job1;
+  .skill-1 {
+    grid-area: skill1;
   }
 
-  .job-2 {
-    grid-area: job2;
+  .skill-2 {
+    grid-area: skill2;
 
     .g-col {
       display: grid;
@@ -152,11 +181,23 @@ main {
 
   }
 
-  .job-3 {
-    grid-area: job3;
+  .skill-3 {
+    grid-area: skill3;
   }
 
-  .job {
+  .skill-4 {
+    grid-area: skill4;
+  }
+
+  .skill-5 {
+    grid-area: skill5;
+  }
+
+  .skill-6 {
+    grid-area: skill6;
+  }
+
+  .skill {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
