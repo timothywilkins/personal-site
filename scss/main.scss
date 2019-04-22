@@ -155,7 +155,10 @@ main {
     
   }
 
-
+  .g-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
   .bio {
     grid-area: bio;
     font-size: 2rem;
@@ -167,12 +170,6 @@ main {
 
   .skill-2 {
     grid-area: skill2;
-
-    .g-col {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
-
   }
 
   .skill-3 {

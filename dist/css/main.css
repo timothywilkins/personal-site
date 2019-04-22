@@ -175,6 +175,9 @@ main {
     border-radius: 10px;
     padding: 15px;
     border: solid 1px #dfdfdf; }
+  .about-info .g-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
   .about-info .bio {
     grid-area: bio;
     font-size: 2rem; }
@@ -182,9 +185,6 @@ main {
     grid-area: skill1; }
   .about-info .skill-2 {
     grid-area: skill2; }
-    .about-info .skill-2 .g-col {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); }
   .about-info .skill-3 {
     grid-area: skill3; }
   .about-info .skill-4 {
@@ -328,5 +328,9 @@ main {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
+  h1.lg-heading {
+    font-size: 2em; }
+  h2.sm-heading {
+    font-size: .7em; }
   .projects {
     grid-template-columns: 1fr; } }
