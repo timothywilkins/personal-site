@@ -1,4 +1,7 @@
 .menu-btn {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
   position: absolute;
   z-index: 3;
   right: 35px;
@@ -126,9 +129,6 @@ a {
   color: #000;
   color: #1a9ef7; }
 
-h3 {
-  font-size: 1.7rem; }
-
 header {
   position: fixed;
   z-index: 2;
@@ -156,47 +156,48 @@ main {
     main#home h1 {
       margin-top: 20vh; }
 
-#photography a {
-  display: inline;
-  font-size: 2em; }
-  #photography a:hover {
-    text-decoration: underline;
-    color: #23c1f1; }
-
-.about-info {
+#about .about-info {
   display: grid;
   grid-gap: 30px;
   grid-template-areas: "bioimage bio bio" "skill1 skill2 skill3" "skill4 skill5 skill6";
   grid-template-columns: repeat(3, 1fr); }
-  .about-info .bio-image {
+  #about .about-info .bio-image {
+    grid-area: bioimage;
     object-fit: cover;
     width: 100%;
     height: 100%;
     border-radius: 10px;
     padding: 15px;
     border: solid 1px #dfdfdf; }
-  .about-info .g-col {
+  #about .about-info .g-col {
     display: grid;
     grid-template-columns: repeat(2, 1fr); }
-  .about-info .bio {
+  #about .about-info .bio {
     grid-area: bio;
     font-size: 2rem; }
-  .about-info .skill-1 {
+  #about .about-info .skill-1 {
     grid-area: skill1; }
-  .about-info .skill-2 {
+  #about .about-info .skill-2 {
     grid-area: skill2; }
-  .about-info .skill-3 {
+  #about .about-info .skill-3 {
     grid-area: skill3; }
-  .about-info .skill-4 {
+  #about .about-info .skill-4 {
     grid-area: skill4; }
-  .about-info .skill-5 {
+  #about .about-info .skill-5 {
     grid-area: skill5; }
-  .about-info .skill-6 {
+  #about .about-info .skill-6 {
     grid-area: skill6; }
-  .about-info .skill {
+  #about .about-info .skill {
     background: white;
     padding: 0.5rem;
     border-bottom: #ff8d70 5px solid; }
+
+#photography a {
+  display: inline;
+  font-size: 2em; }
+  #photography a:hover {
+    text-decoration: underline;
+    color: #23c1f1; }
 
 .projects {
   display: grid;
@@ -205,8 +206,7 @@ main {
   .projects .item-container {
     width: 100%;
     height: 300px;
-    border: 3px white solid;
-    background-color: gray; }
+    border: 3px white solid; }
   .projects img {
     width: 100%;
     border: 3px white solid; }
@@ -214,23 +214,6 @@ main {
       opacity: 0.5;
       border-color: #ff8d70;
       transition: all 0.15s ease-out; }
-
-.btn, .btn-dark, .btn-light {
-  display: block;
-  padding: 0.5rem 1rem;
-  border: 0;
-  margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #ff8d70;
-    color: #000; }
-
-.btn-dark {
-  background: gray;
-  color: #fff; }
-
-.btn-light {
-  background: white;
-  color: #333; }
 
 #contact form input {
   display: block;
@@ -266,6 +249,23 @@ main {
   color: #000;
   height: 60px; }
 
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #ff8d70;
+    color: #000; }
+
+.btn-dark {
+  background: gray;
+  color: #fff; }
+
+.btn-light {
+  background: white;
+  color: #333; }
+
 @media screen and (min-width: 1171px) {
   p {
     font-size: 1.7rem; }
@@ -275,14 +275,14 @@ main {
     grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
-  h1.lg-heading {
+  #about h1.lg-heading {
     font-size: 5rem; }
-  h1.sm-heading {
+  #about h1.sm-heading {
     font-size: 5rem; }
-  .about-info {
+  #about .about-info {
     grid-template-areas: 'bioimage bioimage' 'bio bio' 'skill1 skill2' 'skill3 skill4' 'skill5 skill6';
     grid-template-columns: 1fr 1fr; }
-    .about-info .bio-image {
+    #about .about-info .bio-image {
       margin: 0 auto;
       width: 500px;
       height: 300px;
@@ -332,5 +332,11 @@ main {
     font-size: 2em; }
   h2.sm-heading {
     font-size: .7em; }
-  .projects {
-    grid-template-columns: 1fr; } }
+  #about {
+    padding: 2rem; }
+    #about .about-info .bio-image {
+      width: 250px;
+      height: 300px;
+      object-fit: cover; }
+    #about .about-info .projects {
+      grid-template-columns: 1fr; } }

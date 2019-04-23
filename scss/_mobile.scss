@@ -2,11 +2,13 @@
 
 @include mediaXl {
     p {
-        font-size:1.7rem;
+        font-size: 1.7rem;
     }
+
     h3 {
-        font-size:1.9rem;
-      }
+        font-size: 1.9rem;
+    }
+
     .projects {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -15,32 +17,35 @@
 
 //desktops and laptops
 @include mediaLg {
-    h1 {
-        &.lg-heading {
-            font-size: 5rem;
+    #about {
+        h1 {
+            &.lg-heading {
+                font-size: 5rem;
+            }
+
+            &.sm-heading {
+                font-size: 5rem;
+            }
         }
 
-        &.sm-heading {
-            font-size: 5rem;
+        .about-info {
+            grid-template-areas:
+                'bioimage bioimage'
+                'bio bio'
+                'skill1 skill2'
+                'skill3 skill4'
+                'skill5 skill6';
+            grid-template-columns: 1fr 1fr;
+
+            .bio-image {
+                margin: 0 auto;
+                width: 500px;
+                height: 300px;
+                object-fit: cover;
+            }
         }
     }
 
-    .about-info {
-        grid-template-areas:
-            'bioimage bioimage'
-            'bio bio'
-            'skill1 skill2'
-            'skill3 skill4'
-            'skill5 skill6';
-        grid-template-columns: 1fr 1fr;
-
-        .bio-image {
-            margin: 0 auto;
-            width: 500px;
-            height: 300px;
-            object-fit: cover;
-        }
-    }
 
 
 
@@ -60,19 +65,22 @@
     main#home {
         h1 {
             margin-top: 4vh;
-    
+
         }
+
         .icons {
             a {
                 font-size: 1.2em;
             }
         }
     }
+
     #bg-img {
         background-size: cover !important;
         background-position: -350px 0 !important;
 
     }
+
     h1 {
         &.lg-heading {
             font-size: 4rem;
@@ -136,17 +144,33 @@
 
 //smartphones
 @include mediaSm {
-h1 {
-    &.lg-heading {
-        font-size:2em;
+    h1 {
+        &.lg-heading {
+            font-size: 2em;
+        }
     }
-}
-h2 {
-    &.sm-heading {
-        font-size:.7em;
+
+    h2 {
+        &.sm-heading {
+            font-size: .7em;
+        }
     }
-}
-    .projects {
-        grid-template-columns: 1fr;
+
+    #about {
+        padding:2rem;
+        .about-info {
+            .bio-image {
+                // margin: 0 auto;
+                width: 250px;
+                height: 300px;
+                object-fit: cover;
+            }
+    
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+
     }
+
 }
