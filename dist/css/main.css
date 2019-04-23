@@ -27,7 +27,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.5;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -60,7 +60,7 @@
       list-style: none;
       transition: all 0.15s ease-out; }
       .menu-nav .nav-item.current > a {
-        color: #f36642; }
+        font-weight: 700; }
       .menu-nav .nav-item .nav-link {
         display: inline-block;
         position: relative;
@@ -150,6 +150,9 @@ header {
   font-style: italic;
   font-weight: 700; }
 
+.blur {
+  filter: blur(5px); }
+
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px); }
@@ -180,8 +183,8 @@ main {
 #about .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "skill1 skill2 skill3" "skill4 skill5 skill6";
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-areas: "bioimage bioimage bioimage bio bio bio" "skill1 skill1 skill2 skill2 skill3 skill3" "skill4 skill4 skill5 skill5 skill6 skill6";
+  grid-template-columns: repeat(6, 1fr); }
   #about .about-info .bio-image {
     grid-area: bioimage;
     object-fit: cover;

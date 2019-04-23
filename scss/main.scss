@@ -66,6 +66,10 @@ header {
   font-weight: 700;
 }
 
+.blur {
+  filter: blur(5px);
+}
+
 main {
 
   padding: 4rem;
@@ -118,10 +122,10 @@ main {
     display: grid;
     grid-gap: 30px;
     grid-template-areas:
-      "bioimage bio bio"
-      "skill1 skill2 skill3"
-      "skill4 skill5 skill6";
-    grid-template-columns: repeat(3, 1fr);
+      "bioimage bioimage bioimage bio bio bio"
+      "skill1 skill1 skill2 skill2 skill3 skill3"
+      "skill4 skill4 skill5 skill5 skill6 skill6";
+    grid-template-columns: repeat(6, 1fr);
 
     .bio-image {
       grid-area: bioimage;

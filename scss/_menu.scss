@@ -46,7 +46,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.9;
+    opacity: 0.5;
     visibility: hidden;
 
     &.show {
@@ -97,7 +97,7 @@
             @include easeOut;
 
             &.current>a {
-                color: $secondary-color;
+                font-weight:700;
             }
 
             .nav-link {
