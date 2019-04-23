@@ -60,7 +60,7 @@
       list-style: none;
       transition: all 0.15s ease-out; }
       .menu-nav .nav-item.current > a {
-        color: #ff8d70; }
+        color: #f36642; }
       .menu-nav .nav-item .nav-link {
         display: inline-block;
         position: relative;
@@ -72,7 +72,7 @@
         text-decoration: none;
         transition: all 0.15s ease-out; }
         .menu-nav .nav-item .nav-link:hover {
-          color: #ff8d70; }
+          color: #f36642; }
 
 * {
   box-sizing: border-box; }
@@ -83,13 +83,15 @@ body {
   height: 100%;
   margin: 0;
   line-height: 1.5;
-  font-family: mr-eaves-xl-modern, sans-serif;
+  font-family: objektiv-mk1, sans-serif;
   font-style: normal; }
   body#bg-img {
     background: url(../img/portrait.jpg), linear-gradient(#e4e4e4 0%, #dadada 50%, #ccd5d8 100%);
     background-attachment: fixed;
     background-size: contain;
     background-repeat: no-repeat; }
+    body#bg-img .menu-btn {
+      background: none; }
     body#bg-img:after {
       content: "";
       position: absolute;
@@ -109,12 +111,13 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 9rem;
+    font-size: 5rem;
     font-weight: 300;
     color: #1d1d1d; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
+    font-size: 1rem;
     font-weight: 700;
     font-style: italic;
     text-transform: uppercase;
@@ -122,7 +125,6 @@ h3 {
     padding: 0.2rem 1rem; }
 
 p {
-  font-family: mr-eaves-xl-modern-narrow, sans-serif;
   font-size: 1.2rem; }
 
 a {
@@ -148,7 +150,7 @@ main {
     margin-right: 0.5em;
     color: #1d1d1d; }
     main .icons a:hover {
-      color: #ff8d70;
+      color: #f36642;
       transition: all 0.15s ease-out; }
   main#home {
     text-align: right;
@@ -190,7 +192,7 @@ main {
   #about .about-info .skill {
     background: white;
     padding: 0.5rem;
-    border-bottom: #ff8d70 5px solid; }
+    border-bottom: #f36642 5px solid; }
 
 #photography a {
   display: inline;
@@ -212,7 +214,7 @@ main {
     border: 3px white solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #ff8d70;
+      border-color: #f36642;
       transition: all 0.15s ease-out; }
 
 #contact form input {
@@ -239,8 +241,8 @@ main {
   color: #ffffff;
   padding: 0.832em 1.414em 0.707em; }
   #contact form button:hover {
-    border-color: #ff8d70;
-    background-color: #ff8d70; }
+    border-color: #f36642;
+    background-color: #f36642; }
 
 #main-footer {
   text-align: center;
@@ -255,7 +257,7 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #ff8d70;
+    background: #f36642;
     color: #000; }
 
 .btn-dark {
@@ -268,9 +270,9 @@ main {
 
 @media screen and (min-width: 1171px) {
   p {
-    font-size: 1.7rem; }
+    font-size: 1.3rem; }
   h3 {
-    font-size: 1.9rem; }
+    font-size: 1.5rem; }
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
