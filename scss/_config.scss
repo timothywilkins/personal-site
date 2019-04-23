@@ -1,15 +1,19 @@
 //VARIABLES
 $primary-color: rgb(255, 255, 255);
 $secondary-color: #f36642;
+$c1:#f36642;
+$c2:#79f7bc;
+$c3:#e075ee;
+$c4:#f34260;
+$c5:#e3f15c;
+$c6:#e3f15c;
 $show-home-image: true;
 $home-image: url(../img/portrait.jpg);
 $portrait-image: url(../img/portrait.JPG);
 $background-opacity: 0.0;
 
 
-@mixin easeOut() {
-    transition: all 0.15s ease-out;
-  }
+
 
 
 //set text color
@@ -20,31 +24,5 @@ $background-opacity: 0.0;
 
     @else {
         @return #fff;
-    }
-}
-
-
-
-@mixin mediaSm {
-    @media screen and (max-width: 500px) {
-        @content;
-    }
-}
-
-@mixin mediaMd {
-    @media screen and (max-width: 768px) {
-        @content;
-    }
-}
-
-@mixin mediaLg {
-    @media screen and (min-width: 769px) and (max-width:1170px) {
-        @content;
-    }
-}
-
-@mixin mediaXl {
-    @media screen and (min-width: 1171px) {
-        @content;
     }
 }

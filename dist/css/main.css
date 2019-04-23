@@ -71,8 +71,18 @@
         color: #000;
         text-decoration: none;
         transition: all 0.15s ease-out; }
-        .menu-nav .nav-item .nav-link:hover {
-          color: #f36642; }
+      .menu-nav .nav-item:nth-child(1) .nav-link:hover {
+        color: #f36642; }
+      .menu-nav .nav-item:nth-child(2) .nav-link:hover {
+        color: #79f7bc; }
+      .menu-nav .nav-item:nth-child(3) .nav-link:hover {
+        color: #e075ee; }
+      .menu-nav .nav-item:nth-child(4) .nav-link:hover {
+        color: #f34260; }
+      .menu-nav .nav-item:nth-child(5) .nav-link:hover {
+        color: #e3f15c; }
+      .menu-nav .nav-item:nth-child(6) .nav-link:hover {
+        color: #e3f15c; }
 
 * {
   box-sizing: border-box; }
@@ -150,8 +160,17 @@ main {
     margin-right: 0.5em;
     color: #1d1d1d; }
     main .icons a:hover {
-      color: #f36642;
       transition: all 0.15s ease-out; }
+    main .icons a.c1:hover {
+      color: #f36642; }
+    main .icons a.c2:hover {
+      color: #79f7bc; }
+    main .icons a.c3:hover {
+      color: #e075ee; }
+    main .icons a.c4:hover {
+      color: #f34260; }
+    main .icons a.c5:hover {
+      color: #e3f15c; }
   main#home {
     text-align: right;
     overflow: hidden; }
@@ -341,4 +360,8 @@ main {
       height: 300px;
       object-fit: cover; }
     #about .about-info .projects {
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr; }
+  #contact form textarea {
+    width: 93%; }
+  #contact form input {
+    width: 93%; } }

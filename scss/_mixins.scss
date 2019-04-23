@@ -1,0 +1,53 @@
+@mixin background {
+    @if $show-home-image {
+      &#bg-img {
+        background: $home-image, linear-gradient(#e4e4e4 0%, #dadada 50%, #ccd5d8 100%);
+        background-attachment: fixed;
+        background-size: contain;
+        background-repeat: no-repeat;
+        // background-color: #bcc3cb;
+        .menu-btn {
+          background: none;
+        }
+  
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          background: rgba($primary-color, $background-opacity);
+        }
+      }
+    }
+  }
+
+  @mixin easeOut() {
+    transition: all 0.15s ease-out;
+  }
+
+  @mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width:1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}

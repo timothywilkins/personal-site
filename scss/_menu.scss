@@ -111,9 +111,26 @@
                 text-decoration: none;
                 @include easeOut;
 
-                &:hover {
-                    color: $secondary-color;
-                }
+
+
+            }
+            &:nth-child(1) .nav-link:hover {
+                color: $c1;
+            }
+            &:nth-child(2) .nav-link:hover {
+                color: $c2;
+            }
+            &:nth-child(3) .nav-link:hover {
+                color: $c3;
+            }
+            &:nth-child(4) .nav-link:hover {
+                color: $c4;
+            }
+            &:nth-child(5) .nav-link:hover {
+                color: $c5;
+            }
+            &:nth-child(6) .nav-link:hover {
+                color: $c6;
             }
         }
     }

@@ -157,7 +157,8 @@
     }
 
     #about {
-        padding:2rem;
+        padding: 2rem;
+
         .about-info {
             .bio-image {
                 // margin: 0 auto;
@@ -165,7 +166,7 @@
                 height: 300px;
                 object-fit: cover;
             }
-    
+
             .projects {
                 grid-template-columns: 1fr;
             }
@@ -173,4 +174,14 @@
 
     }
 
+    #contact {
+        form {
+               textarea {
+                   width:93%;
+               }
+               input {
+                width:93%;
+               }
+        }
+    }
 }
