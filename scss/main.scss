@@ -32,15 +32,11 @@ h3 {
   }
 
   &.sm-heading {
-    font-size: 1rem;
+    font-size: 2em;
     font-weight: 700;
     font-style: italic;
     text-transform: uppercase;
-    margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-
-    // background: rgba(lighten($primary-color, 2), 0.5);
-    // filter: blur(0.9px);
+    margin-bottom: 1em;
   }
 }
 
@@ -50,8 +46,12 @@ p {
 }
 
 a {
-  color: set-text-color($secondary-color);
-  color: rgb(26, 158, 247);
+  color: $link;
+  text-decoration: underline;
+
+  &:hover {
+    color: $link-hover;
+  }
 
 }
 
@@ -85,21 +85,27 @@ main {
       padding: 0.4rem;
       margin-right: 0.5em;
       color: #1d1d1d;
-      &:hover{
+
+      &:hover {
         @include easeOut();
       }
+
       &.c1:hover {
         color: $c1;
       }
+
       &.c2:hover {
         color: $c2;
       }
+
       &.c3:hover {
         color: $c3;
       }
+
       &.c4:hover {
         color: $c4;
       }
+
       &.c5:hover {
         color: $c5;
       }
@@ -131,7 +137,7 @@ main {
       grid-area: bioimage;
       object-fit: cover;
       width: 100%;
-      height: 100%;
+      height:100%;
       border-radius: 10px;
       padding: 15px;
       border: solid 1px rgb(223, 223, 223);
@@ -146,6 +152,77 @@ main {
     .bio {
       grid-area: bio;
       font-size: 2rem;
+    }
+
+    .skill-1 {
+      grid-area: skill1;
+    
+    }
+
+    .skill-2 {
+      grid-area: skill2;
+  
+    }
+
+    .skill-3 {
+      grid-area: skill3;
+ 
+    }
+
+    .skill-4 {
+      grid-area: skill4;
+    
+    }
+
+    .skill-5 {
+      grid-area: skill5;
+   
+    }
+
+    .skill-6 {
+      grid-area: skill6;
+   
+    }
+
+    .skill {
+      background: lighten($primary-color, 5);
+      padding: 0.5rem;
+      border-bottom: $c6 5px solid;
+  
+    }
+  }
+}
+
+//PHOTOGRAPHY //DESIGN
+#photography #design {
+  a {
+    display: inline;
+    font-size: 2em;
+  }
+}
+
+
+
+//WEB PROJECTS
+#work {
+  .about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+      "skill1 skill2 skill3 skill4";
+    grid-template-columns: repeat(4, 1fr);
+  
+    a {
+
+      text-decoration: none;
+      font-size: 2em;
+      padding: 5px;
+      margin-right: 0.5em;
+      color: #1d1d1d;
+    
+      &:hover {
+        color: $secondary-color;
+      }
     }
 
     .skill-1 {
@@ -180,46 +257,7 @@ main {
   }
 }
 
-//PHOTOGRAPHY
-#photography {
-  a {
-    display: inline;
-    font-size: 2em;
 
-    &:hover {
-      text-decoration: underline;
-      color: rgb(35, 193, 241);
-    }
-  }
-}
-
-//DESIGN
-#design {}
-
-//WEB PROJECTS
-.projects {
-  display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr);
-
-  .item-container {
-    width: 100%;
-    height: 300px;
-    border: 3px white solid;
-    // background-color: rgb(128, 128, 128);
-  }
-
-  img {
-    width: 100%;
-    border: 3px white solid;
-
-    &:hover {
-      opacity: 0.5;
-      border-color: $secondary-color;
-      @include easeOut;
-    }
-  }
-}
 
 //CONTACT
 #contact {
@@ -268,29 +306,19 @@ main {
 }
 
 //BUTTON STYLES
-.btn {
-  display: block;
-  padding: 0.5rem 1rem;
-  border: 0;
-  margin-bottom: 0.3rem;
 
-  &:hover {
-    background: $secondary-color;
-    color: set-text-color($secondary-color);
-  }
-}
 
-.btn-dark {
-  @extend .btn;
-  background: darken($primary-color, 50);
-  color: #fff;
-}
+// .btn-dark {
+//   @extend .btn;
+//   background: darken($primary-color, 50);
+//   color: #fff;
+// }
 
-.btn-light {
-  @extend .btn;
-  background: lighten($primary-color, 50);
-  color: #333;
-}
+// .btn-light {
+//   @extend .btn;
+//   background: lighten($primary-color, 50);
+//   color: #333;
+// }
 
 @import "mobile";
 //placed in bottom to have media querries run after inital css

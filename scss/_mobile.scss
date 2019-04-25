@@ -45,6 +45,34 @@
             }
         }
     }
+    #work {
+        h1 {
+            &.lg-heading {
+                font-size: 5rem;
+            }
+
+            &.sm-heading {
+                font-size: 5rem;
+            }
+        }
+
+        .about-info {
+            grid-template-areas:
+                'bioimage bioimage'
+                'bio bio'
+                'skill1 skill2'
+                'skill3 skill4'
+                'skill5 skill6';
+            grid-template-columns: 1fr 1fr;
+
+            .bio-image {
+                margin: 0 auto;
+                width: 500px;
+                height: 300px;
+                object-fit: cover;
+            }
+        }
+    }
 
 
 
@@ -137,8 +165,26 @@
     }
 
 
-    .projects {
-        grid-template-columns: repeat(2, 1fr);
+    #work {
+        .about-info {
+            grid-template-areas:
+                'bioimage'
+                'bio'
+                'skill1'
+                'skill2'
+                'skill3'
+                'skill4'
+                'skill5'
+                'skill6';
+            grid-template-columns: 1fr;
+
+            .bio-image {
+                margin: 0 auto;
+                width: 500px;
+                height: 300px;
+                object-fit: cover;
+            }
+        }
     }
 }
 
@@ -157,6 +203,24 @@
     }
 
     #about {
+        padding: 2rem;
+
+        .about-info {
+            .bio-image {
+                // margin: 0 auto;
+                width: 250px;
+                height: 300px;
+                object-fit: cover;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    }
+
+    #work {
         padding: 2rem;
 
         .about-info {

@@ -46,9 +46,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.5;
+    opacity: 0.65;
     visibility: hidden;
-
     &.show {
         visibility: visible;
     }
@@ -110,9 +109,6 @@
                 color: set-text-color($primary-color);
                 text-decoration: none;
                 @include easeOut;
-
-
-
             }
             &:nth-child(1) .nav-link:hover {
                 color: $c1;

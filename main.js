@@ -9,6 +9,7 @@ function toggleMenu() {
   if(!showMenu) {
     menuBtn.classList.add('close');
     menu.classList.add('show');
+    menuBtn.setAttribute("style", "background:none");
     menuNav.classList.add('show');
     main.classList.add('blur');
 
@@ -17,6 +18,7 @@ function toggleMenu() {
   } else {
     menuBtn.classList.remove('close');
     menu.classList.remove('show');
+    menuBtn.setAttribute("style", "background:auto");
     menuNav.classList.remove('show');
     main.classList.remove('blur');
     //set menu state
