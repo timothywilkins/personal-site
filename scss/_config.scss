@@ -1,7 +1,6 @@
 //VARIABLES
 $primary-color: rgb(255, 255, 255);
 $secondary-color: #f36642;
-
 $link: rgb(35, 193, 241);
 $link-hover:rgb(21, 247, 115);
 
@@ -24,7 +23,7 @@ $background-opacity: 0.0;
 //set text color
 @function set-text-color($color) {
     @if (lightness($color) > 40) {
-        @return #000;
+        @return rgb(37, 37, 37);
     }
 
     @else {

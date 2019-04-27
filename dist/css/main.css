@@ -8,11 +8,13 @@
   top: 25px;
   cursor: pointer;
   transition: all 0.15s ease-out; }
+  .menu-btn.home-btn {
+    background: none; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #000;
+    background: #252525;
     transition: all 0.15s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -68,7 +70,7 @@
         text-transform: uppercase;
         padding: 1 rem 0;
         font-weight: 300;
-        color: #000;
+        color: #252525;
         text-decoration: none;
         transition: all 0.15s ease-out; }
       .menu-nav .nav-item:nth-child(1) .nav-link:hover {
@@ -88,53 +90,47 @@
   box-sizing: border-box; }
 
 body {
-  background-color: white;
-  color: #000;
+  color: #252525;
   height: 100%;
   margin: 0;
   line-height: 1.5;
   font-family: objektiv-mk1, sans-serif;
   font-style: normal; }
-  body#bg-img {
-    background: url(../img/portrait.jpg), linear-gradient(#e4e4e4 0%, #dadada 50%, #ccd5d8 100%);
-    background-attachment: fixed;
-    background-size: contain;
-    background-repeat: no-repeat; }
-    body#bg-img .menu-btn {
-      background: none; }
-    body#bg-img:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: rgba(255, 255, 255, 0); }
 
 h1,
 h2,
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.2em;
   font-weight: 300;
-  margin: 0; }
+  margin: 0;
+  text-transform: uppercase; }
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 5rem;
+    margin-top: .8em;
+    text-transform: initial;
+    font-size: 2.5em;
     font-weight: 300;
     color: #1d1d1d; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
-    font-size: 2em;
+    font-size: 1em;
     font-weight: 700;
     font-style: italic;
     text-transform: uppercase;
     margin-bottom: 1em; }
 
 p {
-  font-size: 1.2rem; }
+  font-size: 1em; }
+
+.firstcharacter {
+  float: left;
+  font-size: 5em;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px; }
 
 a {
   color: #23c1f1;
@@ -147,6 +143,10 @@ header {
   z-index: 2;
   width: 100%; }
 
+main {
+  padding: 1.3em;
+  min-height: 90vh; }
+
 .text-secondary {
   font-style: italic;
   font-weight: 700; }
@@ -154,52 +154,71 @@ header {
 .blur {
   filter: blur(5px); }
 
-main {
-  padding: 4rem;
-  min-height: calc(100vh - 60px); }
-  main .icons a {
-    text-decoration: none;
-    font-size: 1.7em;
-    padding: 0.4rem;
-    margin-right: 0.5em;
-    color: #1d1d1d; }
-    main .icons a:hover {
-      transition: all 0.15s ease-out; }
-    main .icons a.c1:hover {
-      color: #f8e918; }
-    main .icons a.c2:hover {
-      color: #79f7bc; }
-    main .icons a.c3:hover {
-      color: #e690f1; }
-    main .icons a.c4:hover {
-      color: #f34260; }
-    main .icons a.c5:hover {
-      color: #6748f0; }
-  main#home {
-    text-align: right;
-    overflow: hidden; }
-    main#home h1 {
-      margin-top: 20vh; }
+#home {
+  background: url(../img/portrait.jpg), linear-gradient(#e4e4e4 0%, #dadada 50%, #ccd5d8 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 40%;
+  background-color: #bcc3cb;
+  background-color: white;
+  padding: 2em;
+  min-height: 100vh;
+  text-align: right;
+  overflow: hidden; }
+  #home .menu-btn {
+    background: none; }
+  #home:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(255, 255, 255, 0); }
+  #home .lol {
+    position: absolute;
+    right: 5px;
+    margin-top: 10vh;
+    writing-mode: vertical-rl;
+    text-orientation: mixed; }
+    #home .lol .icons a {
+      text-decoration: none;
+      font-size: .75em;
+      padding: 0.4rem;
+      margin-right: 0.5em;
+      color: #1d1d1d; }
+      #home .lol .icons a:hover {
+        transition: all 0.15s ease-out; }
+      #home .lol .icons a.c1:hover {
+        color: #f8e918; }
+      #home .lol .icons a.c2:hover {
+        color: #79f7bc; }
+      #home .lol .icons a.c3:hover {
+        color: #e690f1; }
+      #home .lol .icons a.c4:hover {
+        color: #f34260; }
+      #home .lol .icons a.c5:hover {
+        color: #6748f0; }
 
 #about .about-info {
   display: grid;
-  grid-gap: 30px;
-  grid-template-areas: "bioimage bioimage bioimage bio bio bio" "skill1 skill1 skill2 skill2 skill3 skill3" "skill4 skill4 skill5 skill5 skill6 skill6";
-  grid-template-columns: repeat(6, 1fr); }
+  grid-template-areas: 'bioimage' 'bio' 'skill1' 'skill2' 'skill3' 'skill4' 'skill5' 'skill6';
+  grid-template-columns: 1fr; }
   #about .about-info .bio-image {
     grid-area: bioimage;
-    object-fit: cover;
+    margin: 1em auto;
     width: 100%;
-    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
-    padding: 15px;
+    padding: .3em;
     border: solid 1px #dfdfdf; }
   #about .about-info .g-col {
     display: grid;
     grid-template-columns: repeat(2, 1fr); }
   #about .about-info .bio {
-    grid-area: bio;
-    font-size: 2rem; }
+    grid-area: bio; }
   #about .about-info .skill-1 {
     grid-area: skill1; }
   #about .about-info .skill-2 {
@@ -214,21 +233,18 @@ main {
     grid-area: skill6; }
   #about .about-info .skill {
     background: white;
-    padding: 0.5rem;
-    border-bottom: #eb6912 5px solid; }
-
-#photography #design a {
-  display: inline;
-  font-size: 2em; }
+    padding: 0.5rem; }
+    #about .about-info .skill h1, #about .about-info .skill h2, #about .about-info .skill h3 {
+      border-bottom: #252525 2px solid; }
 
 #work .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "skill1 skill2 skill3 skill4";
-  grid-template-columns: repeat(4, 1fr); }
+  grid-template-areas: 'skill1 ' 'skill2' 'skill3' 'skill4' 'skill5' 'skill6';
+  grid-template-columns: 1fr; }
   #work .about-info a {
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 5px;
     margin-right: 0.5em;
     color: #1d1d1d; }
@@ -251,141 +267,105 @@ main {
     padding: 0.5rem;
     border-bottom: #f36642 5px solid; }
 
-#contact form input {
-  display: block;
-  margin-bottom: 0.5em;
-  padding: 1em;
-  width: 450px; }
-
-#contact form textarea {
-  display: block;
-  width: 450px;
-  height: 8em;
-  padding: 1em;
-  margin-bottom: 0.5em; }
-
-#contact form button {
-  cursor: pointer;
-  font-size: .707em;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: .1em;
-  border: 1px solid #103742;
-  background-color: #103742;
-  color: #ffffff;
-  padding: 0.832em 1.414em 0.707em; }
-  #contact form button:hover {
-    border-color: #f36642;
-    background-color: #f36642; }
+#contact form {
+  width: 80%;
+  margin: 2.5em auto 0; }
+  #contact form input {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.7em;
+    padding: 1em; }
+  #contact form textarea {
+    width: 100%;
+    display: block;
+    height: 10em;
+    padding: 1em;
+    margin-bottom: 0.7em; }
+  #contact form button {
+    cursor: pointer;
+    font-size: .707em;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .1em;
+    border: 1px solid #103742;
+    background-color: #103742;
+    color: #ffffff;
+    padding: 0.832em 1.414em 0.707em; }
+    #contact form button:hover {
+      border-color: #f36642;
+      background-color: #f36642; }
 
 #main-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .7em;
   text-align: center;
-  padding: 1rem;
+  padding: 1em;
   background: #e6e6e6;
-  color: #000;
-  height: 60px; }
+  color: #252525;
+  height: 10vh; }
 
-@media screen and (min-width: 1171px) {
-  p {
-    font-size: 1.3rem; }
-  h3 {
-    font-size: 1.5rem; }
-  .projects {
-    grid-template-columns: repeat(4, 1fr); } }
-
-@media screen and (min-width: 769px) and (max-width: 1170px) {
-  #about h1.lg-heading {
-    font-size: 5rem; }
-  #about h1.sm-heading {
-    font-size: 5rem; }
+@media screen and (min-width: 768px) {
+  #menu a {
+    font-size: 3.5vw; }
+  #home {
+    background-color: white;
+    padding: 2em;
+    min-height: 100vh;
+    text-align: right;
+    overflow: hidden; }
+    #home .lol {
+      position: absolute;
+      right: 1em;
+      margin-top: 10vh;
+      writing-mode: horizontal-tb;
+      text-orientation: mixed; }
+      #home .lol h1 {
+        font-size: 3em; }
+      #home .lol .icons {
+        font-size: 2em; }
   #about .about-info {
     grid-template-areas: 'bioimage bioimage' 'bio bio' 'skill1 skill2' 'skill3 skill4' 'skill5 skill6';
     grid-template-columns: 1fr 1fr; }
     #about .about-info .bio-image {
       margin: 0 auto;
       width: 500px;
-      height: 300px;
-      object-fit: cover; }
-  #work h1.lg-heading {
-    font-size: 5rem; }
-  #work h1.sm-heading {
-    font-size: 5rem; }
+      height: 300px; }
   #work .about-info {
-    grid-template-areas: 'bioimage bioimage' 'bio bio' 'skill1 skill2' 'skill3 skill4' 'skill5 skill6';
-    grid-template-columns: 1fr 1fr; }
-    #work .about-info .bio-image {
-      margin: 0 auto;
-      width: 500px;
-      height: 300px;
-      object-fit: cover; }
-  #bg-img {
-    background-size: cover !important; }
-  .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-areas: 'skill1 skill2' 'skill3 skill4' 'skill5 skill6';
+    grid-template-columns: 1fr 1fr; } }
 
-@media screen and (max-width: 768px) {
-  main#home h1 {
-    margin-top: 4vh; }
-  main#home .icons a {
-    font-size: 1.2em; }
-  #bg-img {
-    background-size: cover !important;
-    background-position: -350px 0 !important; }
-  h1.lg-heading {
-    font-size: 4rem; }
-  h1.sm-heading {
-    font-size: 4rem; }
-  #bg-img {
-    background-size: cover !important; }
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  .menu-left {
-    width: 0; }
-  .menu-right {
-    width: 100%; }
+@media screen and (min-width: 900px) {
   #about .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'skill1' 'skill2' 'skill3' 'skill4' 'skill5' 'skill6';
-    grid-template-columns: 1fr; }
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: "bioimage bioimage bioimage bio bio bio" "skill1 skill1 skill2 skill2 skill3 skill3" "skill4 skill4 skill5 skill5 skill6 skill6";
+    grid-template-columns: repeat(6, 1fr); }
     #about .about-info .bio-image {
-      margin: 0 auto;
-      width: 500px;
-      height: 300px;
-      object-fit: cover; }
+      object-fit: cover;
+      width: 100%;
+      height: 100%; }
   #work .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'skill1' 'skill2' 'skill3' 'skill4' 'skill5' 'skill6';
-    grid-template-columns: 1fr; }
-    #work .about-info .bio-image {
-      margin: 0 auto;
-      width: 500px;
-      height: 300px;
-      object-fit: cover; } }
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: "skill1 skill2 skill3 skill4";
+    grid-template-columns: repeat(4, 1fr); }
+    #work .about-info a {
+      text-decoration: none;
+      font-size: 2em;
+      padding: 5px;
+      margin-right: 0.5em;
+      color: #1d1d1d; }
+      #work .about-info a:hover {
+        color: #f36642; } }
 
-@media screen and (max-width: 500px) {
-  h1.lg-heading {
-    font-size: 2em; }
-  h2.sm-heading {
-    font-size: .7em; }
-  #about {
-    padding: 2rem; }
-    #about .about-info .bio-image {
-      width: 250px;
-      height: 300px;
-      object-fit: cover; }
-    #about .about-info .projects {
-      grid-template-columns: 1fr; }
-  #work {
-    padding: 2rem; }
-    #work .about-info .bio-image {
-      width: 250px;
-      height: 300px;
-      object-fit: cover; }
-    #work .about-info .projects {
-      grid-template-columns: 1fr; }
-  #contact form textarea {
-    width: 93%; }
-  #contact form input {
-    width: 93%; } }
+@media screen and (min-width: 1600px) {
+  #home {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: initial; }
+  #home .lol h1 {
+    font-size: 7.5em; }
+  #home .lol .icons {
+    font-size: 3em; } }

@@ -7,8 +7,6 @@
 }
 
 body {
-  @include background;
-  background-color: $primary-color;
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
@@ -18,21 +16,26 @@ body {
   font-style: normal;
 }
 
+
+
 h1,
 h2,
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.2em;
   font-weight: 300;
   margin: 0;
+  text-transform: uppercase;
 
   &.lg-heading {
-    font-size: 5rem;
+    margin-top:.8em;
+    text-transform: initial;
+    font-size: 2.5em;
     font-weight: 300;
     color: #1d1d1d;
   }
 
   &.sm-heading {
-    font-size: 2em;
+    font-size: 1em;
     font-weight: 700;
     font-style: italic;
     text-transform: uppercase;
@@ -41,8 +44,15 @@ h3 {
 }
 
 p {
-  // font-family: mr-eaves-xl-modern-narrow, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1em;
+}
+.firstcharacter {
+  float: left;
+  font-size: 5em;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
 }
 
 a {
@@ -61,6 +71,11 @@ header {
   width: 100%;
 }
 
+main {
+  padding:1.3em;
+  min-height:90vh;
+}
+
 .text-secondary {
   font-style: italic;
   font-weight: 700;
@@ -70,54 +85,59 @@ header {
   filter: blur(5px);
 }
 
-main {
 
-  padding: 4rem;
+//HOME
+#home {
+  @include background;
+  background-color: $primary-color;
+  padding: 2em;
   // height: 100%;
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
+  text-align: right;
+  overflow: hidden; //no scroll bars
 
-  .icons {
+  .lol {
+    position: absolute;
+    right: 5px;
+    margin-top: 10vh;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
 
-    // margin-top: 1rem;
-    a {
-      text-decoration: none;
-      font-size: 1.7em;
-      padding: 0.4rem;
-      margin-right: 0.5em;
-      color: #1d1d1d;
+    h1 {}
 
-      &:hover {
-        @include easeOut();
+    .icons {
+
+      a {
+        text-decoration: none;
+        font-size: .75em;
+        padding: 0.4rem;
+        margin-right: 0.5em;
+        color: #1d1d1d;
+
+        &:hover {
+          @include easeOut();
+        }
+
+        &.c1:hover {
+          color: $c1;
+        }
+
+        &.c2:hover {
+          color: $c2;
+        }
+
+        &.c3:hover {
+          color: $c3;
+        }
+
+        &.c4:hover {
+          color: $c4;
+        }
+
+        &.c5:hover {
+          color: $c5;
+        }
       }
-
-      &.c1:hover {
-        color: $c1;
-      }
-
-      &.c2:hover {
-        color: $c2;
-      }
-
-      &.c3:hover {
-        color: $c3;
-      }
-
-      &.c4:hover {
-        color: $c4;
-      }
-
-      &.c5:hover {
-        color: $c5;
-      }
-    }
-  }
-
-  &#home {
-    text-align: right;
-    overflow: hidden; //no scroll bars
-
-    h1 {
-      margin-top: 20vh;
     }
   }
 }
@@ -126,22 +146,25 @@ main {
 #about {
   .about-info {
     display: grid;
-    grid-gap: 30px;
     grid-template-areas:
-      "bioimage bioimage bioimage bio bio bio"
-      "skill1 skill1 skill2 skill2 skill3 skill3"
-      "skill4 skill4 skill5 skill5 skill6 skill6";
-    grid-template-columns: repeat(6, 1fr);
+      'bioimage'
+      'bio'
+      'skill1'
+      'skill2'
+      'skill3'
+      'skill4'
+      'skill5'
+      'skill6';
+    grid-template-columns: 1fr;
 
     .bio-image {
       grid-area: bioimage;
-      object-fit: cover;
+      margin: 1em auto;
       width: 100%;
-      height:100%;
+      object-fit: cover;
       border-radius: 10px;
-      padding: 15px;
+      padding: .3em;
       border: solid 1px rgb(223, 223, 223);
-
     }
 
     .g-col {
@@ -151,54 +174,53 @@ main {
 
     .bio {
       grid-area: bio;
-      font-size: 2rem;
     }
 
     .skill-1 {
       grid-area: skill1;
-    
+
     }
 
     .skill-2 {
       grid-area: skill2;
-  
+
     }
 
     .skill-3 {
       grid-area: skill3;
- 
+
     }
 
     .skill-4 {
       grid-area: skill4;
-    
+
     }
 
     .skill-5 {
       grid-area: skill5;
-   
+
     }
 
     .skill-6 {
       grid-area: skill6;
-   
+
     }
 
     .skill {
       background: lighten($primary-color, 5);
       padding: 0.5rem;
-      border-bottom: $c6 5px solid;
-  
+      h1, h2, h3 {
+        border-bottom: set-text-color($primary-color) 2px solid;
+      }
     }
   }
 }
 
 //PHOTOGRAPHY //DESIGN
-#photography #design {
-  a {
-    display: inline;
-    font-size: 2em;
-  }
+#photography,
+#design {
+
+
 }
 
 
@@ -209,17 +231,21 @@ main {
     display: grid;
     grid-gap: 30px;
     grid-template-areas:
-      "skill1 skill2 skill3 skill4";
-    grid-template-columns: repeat(4, 1fr);
-  
-    a {
+      'skill1 '
+      'skill2'
+      'skill3'
+      'skill4'
+      'skill5'
+      'skill6';
+    grid-template-columns: 1fr;
 
+    a {
       text-decoration: none;
-      font-size: 2em;
+      font-size: 1.5em;
       padding: 5px;
       margin-right: 0.5em;
       color: #1d1d1d;
-    
+
       &:hover {
         color: $secondary-color;
       }
@@ -257,24 +283,25 @@ main {
   }
 }
 
-
-
 //CONTACT
 #contact {
+  // min-height:90vh;
   form {
+    width: 80%;
+    margin:2.5em auto 0;
     input {
+      width:100%;
       display: block;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.7em;
       padding: 1em;
-      width: 450px;
     }
 
     textarea {
+      width:100%;
       display: block;
-      width: 450px;
-      height: 8em;
+      height: 10em;
       padding: 1em;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.7em;
     }
 
     button {
@@ -298,27 +325,17 @@ main {
 
 //FOOTER
 #main-footer {
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  font-size:.7em;
   text-align: center;
-  padding: 1rem;
+  padding: 1em;
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
-  height: 60px;
+  height: 10vh;
 }
 
-//BUTTON STYLES
-
-
-// .btn-dark {
-//   @extend .btn;
-//   background: darken($primary-color, 50);
-//   color: #fff;
-// }
-
-// .btn-light {
-//   @extend .btn;
-//   background: lighten($primary-color, 50);
-//   color: #333;
-// }
 
 @import "mobile";
 //placed in bottom to have media querries run after inital css

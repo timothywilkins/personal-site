@@ -1,31 +1,42 @@
-// widescreens
+@media screen and (min-width: 768px) {
 
-@include mediaXl {
-    p {
-        font-size: 1.3rem;
+    //HOME
+    #menu {
+        a {
+            font-size: 3.5vw;
+        }
+    }
+    #home {
+        background-color: $primary-color;
+        padding: 2em;
+        // height: 100%;
+        min-height: 100vh;
+        text-align: right;
+        overflow: hidden; //no scroll bars
+
+        .lol {
+            position: absolute;
+            right: 1em;
+            margin-top: 10vh;
+            writing-mode: horizontal-tb;
+            text-orientation: mixed;
+
+            h1 {
+                font-size: 3em;
+            }
+
+            .icons {
+                font-size: 2em;
+            }
+        }
     }
 
-    h3 {
-        font-size: 1.5rem;
-    }
-
-    .projects {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-}
-
-//desktops and laptops
-@include mediaLg {
+    //ABOUT
     #about {
         h1 {
-            &.lg-heading {
-                font-size: 5rem;
-            }
+            &.lg-heading {}
 
-            &.sm-heading {
-                font-size: 5rem;
-            }
+            &.sm-heading {}
         }
 
         .about-info {
@@ -41,211 +52,109 @@
                 margin: 0 auto;
                 width: 500px;
                 height: 300px;
-                object-fit: cover;
             }
         }
     }
+
     #work {
-        h1 {
-            &.lg-heading {
-                font-size: 5rem;
-            }
-
-            &.sm-heading {
-                font-size: 5rem;
-            }
-        }
-
         .about-info {
             grid-template-areas:
-                'bioimage bioimage'
-                'bio bio'
                 'skill1 skill2'
                 'skill3 skill4'
                 'skill5 skill6';
             grid-template-columns: 1fr 1fr;
-
-            .bio-image {
-                margin: 0 auto;
-                width: 500px;
-                height: 300px;
-                object-fit: cover;
-            }
         }
-    }
-
-
-
-
-    #bg-img {
-        background-size: cover !important;
-
-    }
-
-    .projects {
-        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-//tablets and small laptps
-@include mediaMd {
+@media screen and (min-width: 900px) {
 
-    main#home {
-        h1 {
-            margin-top: 4vh;
+    #home {
+        .lol {
+            h1 {
+                // font-size: 3em;
+            }
+
+            .icons {
+                // font-size: 2em;
+            }
+        }
+    }
+
+    //ABOUT
+    #about {
+        .about-info {
+            display: grid;
+            grid-gap: 30px;
+            grid-template-areas:
+                "bioimage bioimage bioimage bio bio bio"
+                "skill1 skill1 skill2 skill2 skill3 skill3"
+                "skill4 skill4 skill5 skill5 skill6 skill6";
+            grid-template-columns: repeat(6, 1fr);
+
+            .bio-image {
+
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
 
         }
+    }
 
-        .icons {
+    //WEB PROJECTS
+    #work {
+        .about-info {
+            display: grid;
+            grid-gap: 30px;
+            grid-template-areas:
+                "skill1 skill2 skill3 skill4";
+            grid-template-columns: repeat(4, 1fr);
+
             a {
-                font-size: 1.2em;
+
+                text-decoration: none;
+                font-size: 2em;
+                padding: 5px;
+                margin-right: 0.5em;
+                color: #1d1d1d;
+
+                &:hover {
+                    color: $secondary-color;
+                }
             }
         }
     }
 
-    #bg-img {
-        background-size: cover !important;
-        background-position: -350px 0 !important;
-
-    }
-
-    h1 {
-        &.lg-heading {
-            font-size: 4rem;
-        }
-
-        &.sm-heading {
-            font-size: 4rem;
-        }
-    }
-
-    #bg-img {
-        background-size: cover !important;
-
-    }
-
-    main {
-        align-items: center;
-        text-align: center;
-
-        .lg-heading {
-            line-height: 1;
-            margin-bottom: 1rem;
-        }
-    }
-
-    .menu-left {
-        width: 0;
-    }
-
-    .menu-right {
-        width: 100%;
-    }
-
-    #about {
-        .about-info {
-            grid-template-areas:
-                'bioimage'
-                'bio'
-                'skill1'
-                'skill2'
-                'skill3'
-                'skill4'
-                'skill5'
-                'skill6';
-            grid-template-columns: 1fr;
-
-            .bio-image {
-                margin: 0 auto;
-                width: 500px;
-                height: 300px;
-                object-fit: cover;
-            }
-        }
-    }
-
-
-    #work {
-        .about-info {
-            grid-template-areas:
-                'bioimage'
-                'bio'
-                'skill1'
-                'skill2'
-                'skill3'
-                'skill4'
-                'skill5'
-                'skill6';
-            grid-template-columns: 1fr;
-
-            .bio-image {
-                margin: 0 auto;
-                width: 500px;
-                height: 300px;
-                object-fit: cover;
-            }
-        }
-    }
 }
 
-//smartphones
-@include mediaSm {
-    h1 {
-        &.lg-heading {
-            font-size: 2em;
-        }
+@media screen and (min-width:1600px) {
+    #home{
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: initial; 
     }
+    #menu {
 
-    h2 {
-        &.sm-heading {
-            font-size: .7em;
-        }
-    }
-
-    #about {
-        padding: 2rem;
-
-        .about-info {
-            .bio-image {
-                // margin: 0 auto;
-                width: 250px;
-                height: 300px;
-                object-fit: cover;
+        .nav-item {
+            a {
+             
             }
 
-            .projects {
-                grid-template-columns: 1fr;
-            }
         }
 
     }
 
-    #work {
-        padding: 2rem;
+    #home {
 
-        .about-info {
-            .bio-image {
-                // margin: 0 auto;
-                width: 250px;
-                height: 300px;
-                object-fit: cover;
+        .lol {
+            h1 {
+                font-size: 7.5em;
             }
 
-            .projects {
-                grid-template-columns: 1fr;
+            .icons {
+                font-size: 3em;
             }
-        }
-
-    }
-
-    #contact {
-        form {
-               textarea {
-                   width:93%;
-               }
-               input {
-                width:93%;
-               }
         }
     }
 }

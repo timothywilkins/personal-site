@@ -1,11 +1,12 @@
 @mixin background {
     @if $show-home-image {
-      &#bg-img {
+ 
         background: $home-image, linear-gradient(#e4e4e4 0%, #dadada 50%, #ccd5d8 100%);
         background-attachment: fixed;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
-        // background-color: #bcc3cb;
+        background-position: 40%; 
+        background-color: #bcc3cb;
         .menu-btn {
           background: none;
         }
@@ -20,7 +21,7 @@
           z-index: -1;
           background: rgba($primary-color, $background-opacity);
         }
-      }
+      
     }
   }
 
