@@ -100,6 +100,7 @@ main {
     position: absolute;
     right: 5px;
     margin-top: 10vh;
+    margin-right:1em;
     writing-mode: vertical-rl;
     text-orientation: mixed;
 
@@ -119,7 +120,7 @@ main {
         }
 
         &.c1:hover {
-          color: $c1;
+          color: $c6;
         }
 
         &.c2:hover {
@@ -131,7 +132,7 @@ main {
         }
 
         &.c4:hover {
-          color: $c4;
+          color: $c1;
         }
 
         &.c5:hover {

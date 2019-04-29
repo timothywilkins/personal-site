@@ -181,6 +181,7 @@ main {
     position: absolute;
     right: 5px;
     margin-top: 10vh;
+    margin-right: 1em;
     writing-mode: vertical-rl;
     text-orientation: mixed; }
     #home .lol .icons a {
@@ -192,13 +193,13 @@ main {
       #home .lol .icons a:hover {
         transition: all 0.15s ease-out; }
       #home .lol .icons a.c1:hover {
-        color: #f8e918; }
+        color: #eb6912; }
       #home .lol .icons a.c2:hover {
         color: #79f7bc; }
       #home .lol .icons a.c3:hover {
         color: #e690f1; }
       #home .lol .icons a.c4:hover {
-        color: #f34260; }
+        color: #f8e918; }
       #home .lol .icons a.c5:hover {
         color: #6748f0; }
 
@@ -336,11 +337,38 @@ main {
     grid-template-areas: 'skill1 skill2' 'skill3 skill4' 'skill5 skill6';
     grid-template-columns: 1fr 1fr; } }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
+  main {
+    padding: 2em; }
+  h1,
+  h2,
+  h3 {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin: 0;
+    text-transform: uppercase; }
+    h1.lg-heading,
+    h2.lg-heading,
+    h3.lg-heading {
+      margin-top: .2em;
+      text-transform: initial;
+      font-size: 3.9em;
+      font-weight: 300;
+      color: #1d1d1d; }
+    h1.sm-heading,
+    h2.sm-heading,
+    h3.sm-heading {
+      font-size: 2em;
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      margin-bottom: 1em; }
+  p {
+    font-size: 1.2em; }
   #about .about-info {
     display: grid;
     grid-gap: 30px;
-    grid-template-areas: "bioimage bioimage bioimage bio bio bio" "skill1 skill1 skill2 skill2 skill3 skill3" "skill4 skill4 skill5 skill5 skill6 skill6";
+    grid-template-areas: "bioimage bioimage bio bio bio ." "skill1 skill1 skill2 skill2 skill3 skill3" "skill4 skill4 skill5 skill5 skill6 skill6";
     grid-template-columns: repeat(6, 1fr); }
     #about .about-info .bio-image {
       object-fit: cover;
@@ -358,14 +386,54 @@ main {
       margin-right: 0.5em;
       color: #1d1d1d; }
       #work .about-info a:hover {
-        color: #f36642; } }
+        color: #f36642; }
+  #contact form {
+    width: 850px;
+    margin: 2.5em 0 2.5em 1em; } }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1400px) {
+  h1,
+  h2,
+  h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin: 0;
+    text-transform: uppercase; }
+    h1.lg-heading,
+    h2.lg-heading,
+    h3.lg-heading {
+      margin-top: .2em;
+      text-transform: initial;
+      font-size: 5em;
+      font-weight: 300;
+      color: #1d1d1d; }
+    h1.sm-heading,
+    h2.sm-heading,
+    h3.sm-heading {
+      font-size: 3em;
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      margin-bottom: 1em; }
+  #home .lol {
+    margin-right: 1.4em; }
+    #home .lol h1 {
+      font-size: 7.5em; }
+    #home .lol .icons {
+      font-size: 3em; }
+  #about .about-info .bio-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%; } }
+
+@media screen and (min-width: 1800px) {
   #home {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: initial; }
-  #home .lol h1 {
-    font-size: 7.5em; }
-  #home .lol .icons {
-    font-size: 3em; } }
+  #home .lol {
+    margin-right: 4.5em; }
+    #home .lol h1 {
+      font-size: 7.5em; }
+    #home .lol .icons {
+      font-size: 2.2em; } }
