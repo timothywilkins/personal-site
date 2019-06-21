@@ -36,14 +36,14 @@
       <div class="menu-right"></div>
       <div class="menu-nav">
         <ul class="menu-nav-list">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">
-              Home
-            </a>
-          </li>
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                  Home
+                </a>
+              </li>
           <li class="nav-item">
             <a href="about.html" class="nav-link">
-              About
+              Experience
             </a>
           </li>
           <li class="nav-item">
@@ -61,6 +61,11 @@
               Web Projects
             </a>
           </li>
+          <li class="nav-item">
+            <a href="music.html" class="nav-link">
+              Music
+            </a>
+          </li>
           <li class="nav-item current">
             <a href="contact.html" class="nav-link">
               Contact
@@ -72,13 +77,13 @@
 
   </header>
   <main id="contact">
-    <h1 class="lg-heading">
-      Contact
-    </h1>
-    <!-- <h2 class="sm-heading">
-      Thank you for your interest in contacting me!
-    </h2> -->
-    <form method="POST" action="https://formspree.io/tim.f.wilkins@gmail.com">
+    <div class="lg-heading">
+        <h1>
+            Contact
+          </h1>
+    </div>
+
+    <form class="col-1" method="POST" action="https://formspree.io/tim.f.wilkins@gmail.com">
       <input type="email" name="email" placeholder="Your email">
       <textarea name="message" placeholder="Test Message"></textarea>
       <button type="submit">Send</button>
@@ -87,6 +92,7 @@
   <footer id="main-footer">
     &#169; 2019 Tim Wilkins. All rights reserved.
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   <script src="main.js"></script>
 </body>
 

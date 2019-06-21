@@ -1,6 +1,6 @@
+
 @mixin background {
     @if $show-home-image {
- 
         background: $home-image, linear-gradient(#e4e4e4 0%, #dadada 50%, #ccd5d8 100%);
         background-attachment: fixed;
         background-size: cover;

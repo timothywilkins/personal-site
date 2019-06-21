@@ -1,12 +1,15 @@
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
+const menuNavList = document.querySelector('.menu-nav-list')
 const main = document.querySelector('main');
 //set initial state of menu
 let showMenu = false;
-menuBtn.addEventListener('click',toggleMenu)
+menuBtn.addEventListener('click', toggleMenu)
+
 function toggleMenu() {
-  if(!showMenu) {
+  // navFadeIn();
+  if (!showMenu) {
     menuBtn.classList.add('close');
     menu.classList.add('show');
     menuBtn.setAttribute("style", "background:none");
@@ -26,4 +29,19 @@ function toggleMenu() {
   }
 }
 
-// TweenMax.from("body", 1, {color:"white"}, 0.5);
+TweenMax.to('#home h1, #home h2', 1.1, {
+  height: "100px",
+  ease: Power4.easeOut
+})
+
+TweenMax.staggerFrom('#about .icon', 1.5, {
+    opacity: 0,
+    ease: Power4.easeOut},
+  .1)
+
+function navFadeIn() {
+  TweenMax.from(menuNavList, 1, {
+    opacity: 0,
+    ease: Power4.easeOut
+  });
+}

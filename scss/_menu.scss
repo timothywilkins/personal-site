@@ -1,5 +1,15 @@
-//Menu button
 
+
+#home-nav {
+    position:absolute;
+    right:0;
+    width:50%;
+    .menu {
+        visibility: visible;
+    }
+}
+
+//Menu button
 .menu-btn {
     background-color: #ffffff;
     &.home-btn {
@@ -95,6 +105,7 @@
 
 
         .nav-item {
+            margin: 0.6em auto;
             list-style: none;
             @include easeOut;
 
@@ -105,7 +116,7 @@
             .nav-link {
                 display: inline-block;
                 position: relative;
-                font-size: 30px;
+                font-size: 1.6em;
                 text-transform: uppercase;
                 padding: 1 rem 0;
                 font-weight: 300;
@@ -130,6 +141,9 @@
             }
             &:nth-child(6) .nav-link:hover {
                 color: $c6;
+            }
+            &:nth-child(7) .nav-link:hover {
+                color: $link-hover;
             }
         }
     }
