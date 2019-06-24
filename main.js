@@ -34,7 +34,7 @@ TweenMax.to('#home h1, #home h2', 1.1, {
   ease: Power4.easeOut
 })
 
-TweenMax.staggerFrom('#about .icon', 1.5, {
+TweenMax.staggerFrom('#about .icon-container', 1.5, {
     opacity: 0,
     ease: Power4.easeOut},
   .1)

@@ -3,16 +3,19 @@
 @import "menu";
 
 body {
+  box-sizing: border-box;
   color: set-text-color($primary-color);
   font-family: objektiv-mk1, sans-serif;
   font-style: normal;
 }
+
 .lg-heading {
   margin-top: 3em;
   margin-bottom: .2em;
 }
+
 .sm-heading {
-margin-bottom:2em;
+  margin-bottom: 2em;
 }
 
 h1,
@@ -24,7 +27,6 @@ h3 {
   text-transform: uppercase;
 }
 
-
 a {
   color: $link;
   text-decoration: underline;
@@ -32,14 +34,15 @@ a {
   &:hover {
     color: $link-hover;
   }
-
 }
+
 h1 {
   text-transform: initial;
   font-size: 2.5em;
   font-weight: 300;
   color: #1d1d1d;
 }
+
 h2 {
   font-size: 1em;
   font-weight: 700;
@@ -50,19 +53,6 @@ h2 {
 p {
   font-size: 1em;
 }
-
-
-
-
-.firstcharacter {
-  float: left;
-  font-size: 3em;
-  line-height: 39px;
-  padding-top: 4px;
-  padding-left: 3px;
-  padding-right: 1px;
-}
-
 
 header {
   position: fixed;
@@ -75,7 +65,6 @@ main {
   min-height: 90vh;
 }
 
-
 .text-secondary {
   font-style: italic;
   font-weight: 700;
@@ -85,35 +74,59 @@ main {
   filter: blur(5px);
 }
 
-
-
 //HOME
 #home {
-  display: grid;
-  grid-template-areas:
-    'lgheading'
-    'smheading'
-    'tag'
-    'col1'
-    'col2'
-    'col3'
-    'col4'
-    'col5'
-    'col6';
-  grid-template-columns: 1fr;
-  padding: 0;
+  box-sizing: border-box;
+  padding: 2em;
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
   overflow: hidden; //no scroll bars
+
   ul {
-    padding:0;
+    padding: 0;
   }
+
   .nav-item {
     list-style: none;
     margin: .8em auto;
+
+    &:nth-of-type(1) {
+      .nav-link {
+        color: $c1;
+      }
+    }
+
+    &:nth-of-type(2) {
+      .nav-link {
+        color: $c2;
+      }
+    }
+
+    &:nth-of-type(3) {
+      .nav-link {
+        color: $c3;
+      }
+    }
+
+    &:nth-of-type(4) {
+      .nav-link {
+        color: $c4;
+      }
+    }
+
+    &:nth-of-type(5) {
+      .nav-link {
+        color: $c5;
+      }
+    }
+
+    &:nth-of-type(6) {
+      .nav-link {
+        color: $c6;
+      }
+    }
   }
 
   .nav-link {
@@ -128,25 +141,34 @@ main {
     height: 52px;
   }
 
+  .name {
+    text-align: center;
+    width: 50vw;
+  }
+
+  .links {
+    width: 50vw;
+    text-align:center;
+  }
+
 }
 
 //SKILLS
 #about {
   .tag {
     display: grid;
-    grid-template-columns: repeat(4, 60px);
+    grid-template-columns: repeat(3, 1fr);
 
-  grid-gap: .5em;
-    margin: 1.2em auto;
-    justify-items:center;
-    align-items:center;
+    grid-gap: .2em .5em;
+    justify-items: center;
+    align-items: center;
     vertical-align: middle;
-  
+
     i {
       vertical-align: inherit;
       font-size: 2em;
     }
-  
+
     img {
       vertical-align: inherit;
       display: inline-block;
@@ -154,13 +176,36 @@ main {
     }
   }
 
-  .icon {
-    background: lighten($primary-color, 5);
-    padding: 0.5rem;
-    h1,
-    h2,
-    h3 {
-      border-bottom: set-text-color($primary-color) 2px solid;
+  .icon-container {
+    text-align: center;
+    perspective: 100px;
+
+    &:hover {
+      .icon-inner {
+        transform: rotateY(180deg);
+      }
+    }
+
+    .icon-inner {
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.3s;
+    }
+
+    .icon {
+      z-index: 2;
+      transform: rotateY(0deg);
+      backface-visibility: hidden;
+    }
+
+    p {
+      backface-visibility: hidden;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotateY(180deg);
+      margin: 0;
+      font-size: .7em;
     }
   }
 }
@@ -198,7 +243,7 @@ main {
     width: 90%;
     margin-top: 3em;
 
-    
+
   }
 }
 
@@ -206,6 +251,7 @@ main {
 #contact {
   form {
     width: 80%;
+
     input {
       font-family: inherit;
       width: 100%;
@@ -213,6 +259,7 @@ main {
       margin-bottom: 0.7em;
       padding: 1em;
     }
+
     textarea {
       font-family: inherit;
 
@@ -222,6 +269,7 @@ main {
       padding: 1em;
       margin-bottom: 0.7em;
     }
+
     button {
       cursor: pointer;
       font-size: .707em;
@@ -232,6 +280,7 @@ main {
       background-color: #103742;
       color: #ffffff;
       padding: 0.832em 1.414em 0.707em;
+
       &:hover {
         border-color: $secondary-color;
         background-color: $secondary-color;
