@@ -2,8 +2,11 @@
 @import "mixins";
 @import "menu";
 
-body {
+
+*  {
   box-sizing: border-box;
+}
+body {
   color: set-text-color($primary-color);
   font-family: objektiv-mk1, sans-serif;
   font-style: normal;
@@ -76,12 +79,8 @@ main {
 
 //HOME
 #home {
-  box-sizing: border-box;
   padding: 2em;
   height: 100vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   overflow: hidden; //no scroll bars
 
   ul {
@@ -91,65 +90,65 @@ main {
   .nav-item {
     list-style: none;
     margin: .8em auto;
-
-    &:nth-of-type(1) {
-      .nav-link {
-        color: $c1;
-      }
-    }
-
-    &:nth-of-type(2) {
-      .nav-link {
-        color: $c2;
-      }
-    }
-
-    &:nth-of-type(3) {
-      .nav-link {
-        color: $c3;
-      }
-    }
-
-    &:nth-of-type(4) {
-      .nav-link {
-        color: $c4;
-      }
-    }
-
-    &:nth-of-type(5) {
-      .nav-link {
-        color: $c5;
-      }
-    }
-
-    &:nth-of-type(6) {
-      .nav-link {
-        color: $c6;
-      }
-    }
   }
 
+  .name {
+    height:50vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:repeat(3,1fr);
+    align-items:center;
+  }
+  .hello {
+    font-size:9vw;
+    font-weight:200;
+    text-transform: uppercase;
+    font-style: italic;
+  }
+  .mynameis{
+    font-weight:200;
+    grid-row:1/3;
+    grid-column: 2/3;
+
+    .lol{
+      margin-left:18vw;
+      display:flex;
+      flex-flow: column;
+      justify-content:space-between;
+    }
+    .lol2 {
+      font-size:4.5vw;
+    }
+
+  }
+
+h1 {
+  font-weight:200;
+  font-size:21vw;
+}
+.Tim {
+
+  grid-row:2/3;
+  grid-column: 1/2;
+}
+.Wilkins {
+  // font-weight:200;
+  // font-size:21vw;
+  grid-row:3/4;
+  grid-column: 1/3;
+}
+
+h1 {
+  margin:0;
+}
+  .links {
+    height:50vh;
+
+  }
   .nav-link {
     text-decoration: none;
   }
 
-  h1,
-  h2 {
-    position: relative;
-    overflow: hidden;
-    font-size: 2em;
-    height: 52px;
-  }
-
-  .name {
-    text-align: center;
-    width: 50vw;
-  }
-
-  .links {
-    width: 50vw;
-    text-align:center;
-  }
 
 }
 
