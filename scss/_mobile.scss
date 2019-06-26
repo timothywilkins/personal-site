@@ -31,16 +31,24 @@
     }
 
     #home {
+        .name {
+            grid-template-columns: repeat(2,500px);
+            .mynameis-inner {
+                margin:0;
+                p {
+                    font-size: 35px;
+                }
+            }
+        }
         .hello {
             font-size:69px;
         }
 
-        .lol2 {
-            font-size: 35px !important;
-        }
-
         h1 {
             font-size: 159px;
+        }
+        .links {
+            margin-left:69px;
         }
     }
 

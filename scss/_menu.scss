@@ -77,15 +77,12 @@
         height: 100vh;
         overflow: hidden;
     }
-
     &-left {
         background-color: #e9e9e9;
     }
-
     &-right {
         background-color: #ffffff;
     }
-
     &-nav {
         position: absolute;
         top: 0;
@@ -100,9 +97,7 @@
             align-items: center;
         }
 
-        // background:darken($primary-color, 5);
         @include easeOut;
-
 
         .nav-item {
             margin: 0.6em auto;

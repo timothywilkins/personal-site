@@ -2,23 +2,15 @@
 @import "mixins";
 @import "menu";
 
-
-*  {
+//GLOBAL
+* {
   box-sizing: border-box;
 }
+
 body {
   color: set-text-color($primary-color);
   font-family: objektiv-mk1, sans-serif;
   font-style: normal;
-}
-
-.lg-heading {
-  margin-top: 3em;
-  margin-bottom: .2em;
-}
-
-.sm-heading {
-  margin-bottom: 2em;
 }
 
 h1,
@@ -26,7 +18,6 @@ h2,
 h3 {
   font-size: 1.2em;
   font-weight: 300;
-  // margin: 0;
   text-transform: uppercase;
 }
 
@@ -43,7 +34,6 @@ h1 {
   text-transform: initial;
   font-size: 2.5em;
   font-weight: 300;
-  color: #1d1d1d;
 }
 
 h2 {
@@ -57,6 +47,15 @@ p {
   font-size: 1em;
 }
 
+.lg-heading {
+  margin-top: 3em;
+  margin-bottom: .2em;
+}
+
+.sm-heading {
+  margin-bottom: 2em;
+}
+
 header {
   position: fixed;
   z-index: 2;
@@ -68,23 +67,25 @@ main {
   min-height: 90vh;
 }
 
-.text-secondary {
-  font-style: italic;
-  font-weight: 700;
-}
-
 .blur {
   filter: blur(5px);
 }
 
 //HOME
 #home {
-  padding: 2em;
+  text-transform: uppercase;
   height: 100vh;
   overflow: hidden; //no scroll bars
 
-  ul {
-    padding: 0;
+  h1 {
+    text-transform: inherit;
+    font-weight: 800;
+    font-size: 18vw;
+    margin: 0;
+  }
+
+  a {
+    color: $black;
   }
 
   .nav-item {
@@ -93,63 +94,58 @@ main {
   }
 
   .name {
-    height:50vh;
+    height: 50vh;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows:repeat(3,1fr);
-    align-items:center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
   }
+
   .hello {
-    font-size:9vw;
-    font-weight:200;
-    text-transform: uppercase;
-    font-style: italic;
+    font-size: 9vw;
+    font-weight: 500;
   }
-  .mynameis{
-    font-weight:200;
-    grid-row:1/3;
+
+  .mynameis {
+    font-weight: 400;
+    grid-row: 1/3;
     grid-column: 2/3;
-
-    .lol{
-      margin-left:18vw;
-      display:flex;
-      flex-flow: column;
-      justify-content:space-between;
-    }
-    .lol2 {
-      font-size:4.5vw;
-    }
-
   }
 
-h1 {
-  font-weight:200;
-  font-size:21vw;
-}
-.Tim {
+  .mynameis-inner {
+    margin-left: 18vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 
-  grid-row:2/3;
-  grid-column: 1/2;
-}
-.Wilkins {
-  // font-weight:200;
-  // font-size:21vw;
-  grid-row:3/4;
-  grid-column: 1/3;
-}
+    p {
+      font-size: 5vw;
+    }
+  }
 
-h1 {
-  margin:0;
-}
+  .Tim {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .Wilkins {
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+
   .links {
-    height:50vh;
-
-  }
-  .nav-link {
-    text-decoration: none;
+    margin-left: 9vw;
+    height: 50vh;
   }
 
+  ul {
+    padding: 0;
+    margin-left: 1.7em;
+  }
 
+  // .nav-link {
+  //   text-decoration: none;
+  // }
 }
 
 //SKILLS
@@ -157,24 +153,23 @@ h1 {
   .tag {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
-    grid-gap: .2em .5em;
+    grid-gap: .5em .5em;
     justify-items: center;
     align-items: center;
     vertical-align: middle;
-
-    i {
-      vertical-align: inherit;
-      font-size: 2em;
-    }
-
-    img {
-      vertical-align: inherit;
-      display: inline-block;
-      height: 2em;
-    }
   }
 
+  i {
+    vertical-align: inherit;
+    font-size: 2em;
+  }
+
+  img {
+    vertical-align: inherit;
+    display: inline-block;
+    height: 2em;
+  }
+  
   .icon-container {
     text-align: center;
     perspective: 100px;
@@ -296,7 +291,7 @@ h1 {
   font-size: .7em;
   text-align: center;
   padding: 1em;
-  background: darken($primary-color, 10);
+  background: $grey;
   color: set-text-color($primary-color);
   height: 10vh;
 }

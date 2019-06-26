@@ -3,6 +3,8 @@ $primary-color: rgb(255, 255, 255);
 $secondary-color: #f36642;
 $link: rgb(35, 193, 241);
 $link-hover:rgb(21, 247, 115);
+$black:#3a3a3a;
+$grey: #e6e6e6;
 
 
 $c1:#f8e918;
@@ -11,9 +13,8 @@ $c3:#e690f1;
 $c4:#f34260;
 $c5:#eb6912;
 $c6:#6748f0;
-$show-home-image: true;
-$home-image: url(../img/portrait.jpg);
-$portrait-image: url(../img/portrait.JPG);
+
+
 $background-opacity: 0.0;
 
 
@@ -23,7 +24,7 @@ $background-opacity: 0.0;
 //set text color
 @function set-text-color($color) {
     @if (lightness($color) > 40) {
-        @return rgb(37, 37, 37);
+        @return $black;
     }
 
     @else {
