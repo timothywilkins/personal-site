@@ -1,8 +1,9 @@
-const menuBtn = document.querySelector('.menu-btn');
-const menu = document.querySelector('.menu');
-const menuNav = document.querySelector('.menu-nav');
-const menuNavList = document.querySelector('.menu-nav-list')
-const main = document.querySelector('main');
+//MENU VARIABLES
+const menuBtn = document.querySelector('.menu-btn'),
+  menu = document.querySelector('.menu'),
+  menuNav = document.querySelector('.menu-nav'),
+  menuNavList = document.querySelector('.menu-nav-list'),
+  main = document.querySelector('main');
 //set initial state of menu
 let showMenu = false;
 menuBtn.addEventListener('click', toggleMenu)
@@ -29,6 +30,7 @@ function toggleMenu() {
   }
 }
 
+
 TweenMax.to('#home h1, #home h2', 1.1, {
   height: "100px",
   ease: Power4.easeOut
@@ -36,7 +38,8 @@ TweenMax.to('#home h1, #home h2', 1.1, {
 
 TweenMax.staggerFrom('#about .icon-container', 1.5, {
     opacity: 0,
-    ease: Power4.easeOut},
+    ease: Power4.easeOut
+  },
   .1)
 
 function navFadeIn() {
