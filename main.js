@@ -44,7 +44,7 @@ var pageTl = new TimelineMax;
 pageTl
 .from(h1, .6, {
   x:"-=20",
-  opacity:0,
+  autoAlpha:0,
   ease: Power4.easeOut
 })
 .add("endh1");
@@ -53,7 +53,7 @@ if( h2 ){
   pageTl.shiftChildren(0)
   .from(h2, 1, {
     x:"-=20",
-    opacity:0,
+    autoAlpha:0,
     ease: Power4.easeOut
   })
 }

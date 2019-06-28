@@ -1,7 +1,3 @@
-
-
-
-
 //HOME PAGE FADE-IN
 var tl = new TimelineMax();
 
@@ -19,16 +15,16 @@ tl
         ease: Power4.easeOut
     })
     .staggerFrom(mynameis, 1, {
-        opacity: 0
+        autoAlpha: 0
     }, .3)
     .from(tim, 1, {
-        opacity: 0
+        autoAlpha: 0
     })
     .add("links")
     .from(wilkins, 3, {
-        opacity: 0
+        autoAlpha: 0
     })
     .staggerFrom(helloSingleWords,1,{color:"red"},.3,"links")
     .staggerFrom(links, 1, {
-        opacity: 0
+        autoAlpha: 0
     }, .1,"links-=.5");

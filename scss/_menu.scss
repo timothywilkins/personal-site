@@ -1,36 +1,55 @@
+.btn-line {
+    background-color: orange;
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    @include easeOut;
+}
 
 
-#home-nav {
-    position:absolute;
-    right:0;
-    width:50%;
-    .menu {
-        visibility: visible;
+#skills-btn {
+    .btn-line {
+        background-color: $c1;
+    }
+}
+#photography-btn {
+    .btn-line {
+        background-color: $c2;
+    }
+}
+#design-btn {
+    .btn-line {
+        background-color: $c3;
+    }
+}
+#web-btn {
+    .btn-line {
+        background-color: $c4;
+    }
+}
+#music-btn {
+    .btn-line {
+        background-color: $c5;
+    }
+}
+#contact-btn {
+    .btn-line {
+        background-color: $c6;
     }
 }
 
 //Menu button
 .menu-btn {
+    position: absolute;
     background-color: #ffffff;
-    &.home-btn {
-        background: none;
-    }
     padding: 5px;
     border-radius: 5px;
-    position: absolute;
     z-index: 3;
     right: 35px;
     top: 25px;
     cursor: pointer;
     @include easeOut;
 
-    .btn-line {
-        width: 28px;
-        height: 3px;
-        margin: 0 0 5px 0;
-        background: pink;
-        @include easeOut;
-    }
 
     &.close {
         transform: rotate(180deg);
@@ -52,15 +71,13 @@
 
 }
 
-//menuoverlay
-
 .menu {
-
     position: fixed;
     top: 0;
     width: 100%;
     opacity: 0.65;
     visibility: hidden;
+
     &.show {
         visibility: visible;
     }
@@ -77,12 +94,15 @@
         height: 100vh;
         overflow: hidden;
     }
+
     &-left {
         background-color: #e9e9e9;
     }
+
     &-right {
         background-color: #ffffff;
     }
+
     &-nav {
         position: absolute;
         top: 0;
@@ -105,7 +125,7 @@
             @include easeOut;
 
             &.current>a {
-                font-weight:700;
+                font-weight: 700;
             }
 
             .nav-link {
@@ -119,24 +139,31 @@
                 text-decoration: none;
                 @include easeOut;
             }
+
             &:nth-child(1) .nav-link:hover {
                 color: $c1;
             }
+
             &:nth-child(2) .nav-link:hover {
                 color: $c2;
             }
+
             &:nth-child(3) .nav-link:hover {
                 color: $c3;
             }
+
             &:nth-child(4) .nav-link:hover {
                 color: $c4;
             }
+
             &:nth-child(5) .nav-link:hover {
                 color: $c5;
             }
+
             &:nth-child(6) .nav-link:hover {
                 color: $c6;
             }
+
             &:nth-child(7) .nav-link:hover {
                 color: $link-hover;
             }

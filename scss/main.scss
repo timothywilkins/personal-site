@@ -63,6 +63,7 @@ header {
 }
 
 main {
+  position:relative;
   padding: 1.3em;
   min-height: 90vh;
 }
@@ -150,6 +151,12 @@ main {
 
 //SKILLS
 #about {
+
+    .btn-line {
+      background-color: $c2;
+    }
+  
+
   .tag {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -205,12 +212,25 @@ main {
 }
 
 //PHOTOGRAPHY //DESIGN
-#photography,
-#design {}
+#photography {
+  .menu-btn {
+    .btn-line {
+      background-color: $c3;
+    }
+  }
+}
+#design {
+  .btn-line {
+    background-color: $c4;
+  }
+}
 
 
 //WEB PROJECTS
 #work {
+  .btn-line {
+    background: $c5;
+  }
   .project {
     background: lighten($primary-color, 5);
     padding: 0 1em;
@@ -233,6 +253,9 @@ main {
 
 //MUSIC
 #music {
+  .btn-line {
+    background: $c6;
+  }
   iframe {
     width: 90%;
     margin-top: 3em;
@@ -243,6 +266,9 @@ main {
 
 //CONTACT
 #contact {
+  .btn-line {
+    background: $black;
+  }
   form {
     width: 80%;
 
