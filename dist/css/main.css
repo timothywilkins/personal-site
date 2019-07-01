@@ -1,12 +1,11 @@
 .btn-line {
-  background-color: orange;
   width: 28px;
   height: 3px;
   margin: 0 0 5px 0;
   transition: all 0.15s ease-out; }
 
 #skills-btn .btn-line {
-  background-color: #f8e918; }
+  background-color: #eadb00; }
 
 #photography-btn .btn-line {
   background-color: #79f7bc; }
@@ -92,7 +91,7 @@
         text-decoration: none;
         transition: all 0.15s ease-out; }
       .menu-nav .nav-item:nth-child(1) .nav-link:hover {
-        color: #f8e918; }
+        color: #eadb00; }
       .menu-nav .nav-item:nth-child(2) .nav-link:hover {
         color: #79f7bc; }
       .menu-nav .nav-item:nth-child(3) .nav-link:hover {
@@ -185,6 +184,7 @@ main {
     font-size: 9vw;
     font-weight: 500; }
   #home .mynameis {
+    align-items: initial;
     font-weight: 400;
     grid-row: 1/3;
     grid-column: 2/3; }
@@ -192,7 +192,7 @@ main {
     margin-left: 18vw;
     display: flex;
     flex-flow: column;
-    justify-content: space-between; }
+    justify-content: space-around; }
     #home .mynameis-inner p {
       font-size: 5vw; }
   #home .tim {
@@ -323,6 +323,11 @@ main {
   height: 10vh; }
 
 @media screen and (min-width: 768px) {
+  .menu-btn.close .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(12px, 12px); }
+  .btn-line {
+    width: 45px;
+    height: 8px; }
   h1 {
     margin: .27em 0; }
   h2 {
@@ -338,12 +343,10 @@ main {
     font-size: 1.6em; }
   .nav-item {
     font-size: 1.8em; }
-  #home .name {
-    grid-template-columns: repeat(2, 500px); }
-    #home .name .mynameis-inner {
-      margin: 0; }
-      #home .name .mynameis-inner p {
-        font-size: 35px; }
+  #home .name .mynameis-inner {
+    margin: 0; }
+    #home .name .mynameis-inner p {
+      font-size: 35px; }
   #home .hello {
     font-size: 69px; }
   #home h1 {
@@ -370,7 +373,7 @@ main {
     #work .col {
       grid-column: 1/3; }
   #about {
-    padding: 1.9em; }
+    padding: 3.1em 1.9em 1.9em; }
     #about .tag {
       grid-gap: 0;
       grid-template-columns: repeat(4, 1fr); }
@@ -385,7 +388,24 @@ main {
   #main-footer {
     font-size: 1.2em; } }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1522px) {
+  #home {
+    display: flex;
+    align-items: center;
+    padding: 2.4em; }
+    #home .name {
+      width: 50vw;
+      height: 95vh; }
+    #home .hello {
+      font-size: 5vw; }
+    #home .links {
+      height: 100vh;
+      width: 50vw;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      #home .links .nav-item {
+        font-size: 3.5vw; }
   #about .tag {
     grid-gap: 0;
     grid-template-columns: repeat(5, 1fr); }

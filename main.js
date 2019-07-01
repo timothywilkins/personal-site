@@ -8,7 +8,9 @@ const menuBtn = document.querySelector('.menu-btn'),
   main = document.querySelector('main'),
 //PAGE VARIABLES
   h1 = document.querySelector('h1'),
-  h2 = document.querySelector('h2');
+  h2 = document.querySelector('h2'),
+links = document.querySelectorAll('.nav-link');
+
 
 //set initial state of menu
 let showMenu = false;
@@ -26,6 +28,7 @@ function toggleMenu() {
     menuBtn.setAttribute("style", "background:none");
     menuNav.classList.add('show');
     main.classList.add('blur');
+    // linkColorWave();
 
     //set menu state
     showMenu = true;
@@ -68,15 +71,11 @@ TweenMax.staggerFrom('#about .icon-container', 1.5, {
   .1)
 
   
-function navFadeIn() {
-  TweenMax.from(menuNavList, 1, {
-    opacity: 0,
-    ease: Power4.easeOut
-  });
-}
-
-var lol = document.querySelector('#about .icon-container')
-console.log(lol)
+  function linkColorWave() {
+    tl = new TimelineMax;
+    tl.staggerFrom(links,.2,{color:"red"},.1)
+    }
+    
 
 }, false);
 

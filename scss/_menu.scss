@@ -1,11 +1,9 @@
 .btn-line {
-    background-color: orange;
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     @include easeOut;
 }
-
 
 #skills-btn {
     .btn-line {

@@ -1,5 +1,15 @@
 @media screen and (min-width: 768px) {
-
+    .menu-btn{
+        &.close {
+            .btn-line:nth-child(1) {
+                transform: rotate(45deg) translate(12px, 12px);
+            }
+        }
+    }
+    .btn-line {
+        width: 45px;
+        height: 8px;
+        }
     h1 {
         margin: .27em 0;
     }
@@ -32,23 +42,26 @@
 
     #home {
         .name {
-            grid-template-columns: repeat(2,500px);
+         
             .mynameis-inner {
-                margin:0;
+                margin: 0;
+
                 p {
                     font-size: 35px;
                 }
             }
         }
+
         .hello {
-            font-size:69px;
+            font-size: 69px;
         }
 
         h1 {
             font-size: 159px;
         }
+
         .links {
-            margin-left:69px;
+            margin-left: 69px;
         }
     }
 
@@ -78,7 +91,7 @@
     }
 
     #about {
-        padding: 1.9em;
+        padding: 3.1em 1.9em 1.9em;
 
         .tag {
             grid-gap: 0;
@@ -112,8 +125,32 @@
     }
 }
 
-@media screen and (min-width: 1000px) {
-    #home {}
+@media screen and (min-width: 1522px) {
+
+    #home {
+        display:flex;
+        align-items: center;
+        padding:2.4em;
+
+        .name {
+            width: 50vw;
+            height: 95vh;
+        }
+
+        .hello {
+            font-size:5vw;
+        }
+        .links {
+            height: 100vh;
+            width: 50vw;
+            display:flex;
+            align-items: center;
+            justify-content:center;
+            .nav-item {
+                font-size:3.5vw;
+            }
+        }
+    }
 
     #about {
         .tag {
