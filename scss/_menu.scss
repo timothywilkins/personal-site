@@ -138,6 +138,10 @@
                 @include easeOut;
             }
 
+            // &:nth-child(1) .nav-link:hover {
+            //     color: $c2;
+            // }
+
             &:nth-child(1) .nav-link:hover {
                 color: $c1;
             }
@@ -160,10 +164,6 @@
 
             &:nth-child(6) .nav-link:hover {
                 color: $c6;
-            }
-
-            &:nth-child(7) .nav-link:hover {
-                color: $link-hover;
             }
         }
     }

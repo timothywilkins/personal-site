@@ -78,6 +78,34 @@ main {
   text-transform: uppercase;
   height: 100vh;
   overflow: hidden; //no scroll bars
+.nav-item {
+  list-style: none;
+  margin: .8em auto;
+  &:nth-child(1) .nav-link:hover {
+    color: $c1;
+}
+
+&:nth-child(2) .nav-link:hover {
+    color: $c2;
+}
+
+&:nth-child(3) .nav-link:hover {
+    color: $c3;
+}
+
+&:nth-child(4) .nav-link:hover {
+    color: $c4;
+}
+
+&:nth-child(5) .nav-link:hover {
+    color: $c5;
+}
+
+&:nth-child(6) .nav-link:hover {
+    color: $c6;
+}
+}
+
 
   h1 {
     text-transform: inherit;
@@ -86,13 +114,10 @@ main {
     margin: 0;
   }
 
-  a {
-    color: $black;
-  }
 
-  .nav-item {
-    list-style: none;
-    margin: .8em auto;
+  .nav-link {
+    color:inherit;
+    font-weight:700;
   }
 
   .name {
