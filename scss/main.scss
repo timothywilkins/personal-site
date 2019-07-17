@@ -21,14 +21,7 @@ h3 {
   text-transform: uppercase;
 }
 
-a {
-  color: $link;
-  text-decoration: underline;
 
-  &:hover {
-    color: $link-hover;
-  }
-}
 
 h1 {
   text-transform: initial;
@@ -54,6 +47,14 @@ p {
 
 .sm-heading {
   margin-bottom: 2em;
+  a {
+    color: $link !important;
+    text-decoration: underline !important;
+  
+    &:hover {
+      color: $link-hover !important;
+    }
+  }
 }
 
 header {
@@ -226,26 +227,22 @@ main {
 
 //WEB PROJECTS
 #work {
+  a {
+    text-decoration: none;
+    color: inherit;
+    // border-bottom: $c4 5px solid;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
   .btn-line {
-    background: $c5;
+    background: $c4;
   }
   .project {
     background: lighten($primary-color, 5);
-    padding: 0 1em;
-    border-bottom: $c5 5px solid;
+    // padding: 0 1em;
 
-
-    a {
-      text-decoration: none;
-      font-size: 1.5em;
-      padding: 5px;
-      margin-right: 0.5em;
-      color: #1d1d1d;
-
-      &:hover {
-        color: $secondary-color;
-      }
-    }
   }
 }
 

@@ -120,12 +120,6 @@ h3 {
   font-weight: 300;
   text-transform: uppercase; }
 
-a {
-  color: #23c1f1;
-  text-decoration: underline; }
-  a:hover {
-    color: #15f773; }
-
 h1 {
   text-transform: initial;
   font-size: 2.5em;
@@ -146,6 +140,11 @@ p {
 
 .sm-heading {
   margin-bottom: 2em; }
+  .sm-heading a {
+    color: #23c1f1 !important;
+    text-decoration: underline !important; }
+    .sm-heading a:hover {
+      color: #15f773 !important; }
 
 header {
   position: fixed;
@@ -256,21 +255,17 @@ main {
 #design .btn-line {
   background-color: #f34260; }
 
+#work a {
+  text-decoration: none;
+  color: inherit; }
+  #work a:hover {
+    color: #f36642; }
+
 #work .btn-line {
-  background: #eb6912; }
+  background: #f34260; }
 
 #work .project {
-  background: white;
-  padding: 0 1em;
-  border-bottom: #eb6912 5px solid; }
-  #work .project a {
-    text-decoration: none;
-    font-size: 1.5em;
-    padding: 5px;
-    margin-right: 0.5em;
-    color: #1d1d1d; }
-    #work .project a:hover {
-      color: #f36642; }
+  background: white; }
 
 #music .btn-line {
   background: #6748f0; }
